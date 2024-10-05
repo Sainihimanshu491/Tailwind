@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // document.cookies = "name=himanshu"
+        //document.cookies = "class=bsc physical science"
+       // alert(document.cookies)
+       let key = prompt("Enter Your Key")
+       let value = prompt("Enter Your Value")
+       document.cookies = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+       console.log(document.cookies)
+    </script>
+</body>
+</html>

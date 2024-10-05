@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Human{
+            constructor(name,age){
+                this.name = name
+                this.age = age 
+            }
+            run(){
+                console.log(this.name + " and his Friends is Running on the Road")
+            }
+            get name2(){
+                return this._name
+            }
+            set name2(newname){
+                this._name = newname
+            }
+        }
+        let data = new Human("Himanshu",18)
+        //console.log(data)
+        data.run()
+        console.log(data.name)
+        data.name = "Shivansh"
+        console.log(data.name)
+        
+    </script>
+</body>
+</html>

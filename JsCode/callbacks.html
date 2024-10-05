@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+   /* let loadscript =(src,callback)=>{
+      let script = document.createElement("script")
+      script.src = src
+      script.onload =()=>{
+        console.log("Your Script Will Be Loaded")
+        
+      }
+      script.onerror =()=>{
+        console.log(new Error("Some Error Occured in Loading Script"))
+        callback();
+      }
+      document.body.appendChild(script)
+    }
+    function himanshu(){
+         console.log("Hlo My Name is Himanshu  Saini")
+    }
+    function friend(){
+        console.log("My Best Friend is Shivansh and Anmolpreet")
+    }
+
+    loadscript("https://cdn.jnsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",friend)
+    let p1 = new Promise((resolve,reject)=>{
+        console.log("Intially pending.....")
+         setTimeout(()=>{
+            reject(new Error("Some Error Occured"))
+         },3000)
+    })
+    console.log(p1)*/
+    let p1 = new Promise((resolve,reject)=>{
+         setTimeout(()=>{
+            resolve(56)
+         },3000)
+    })
+    let p2 = new Promise((resolve,reject)=>{
+         setTimeout(()=>{
+          reject(new Error("Some Error Occurred"))
+         },3000)
+    })
+    p1.then((value)=>{
+        document.write("Promise Resolve With Some Value")
+    }).catch((error)=>{
+        console.log("some error occured")
+    })
+
+  </script>  
+</body>
+</html>

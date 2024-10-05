@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Resolve in 10 Second")
+                resolve(56)
+            },10000)
+        })
+        let p2 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Resolve in 14 Second")
+                resolve(56)
+            },14000)
+        })
+        let p3 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Resolve in 17 Second")
+                resolve(56)
+            },17000)
+        })
+        let a = Promise.all[p1,p2,p3]
+        a.then((value)=>{
+            console.log(value)
+        })
+    </script>
+</body>
+</html>

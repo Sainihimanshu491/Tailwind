@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        class Railwayform{
+            constructor(name,traino){
+                console.log("constructed started")
+                this.name = name
+                this.traino = traino
+            }
+            submit(){
+                 alert(`${this.name} Submitted His Train Reservation Form With ${this.traino}`)
+            }
+            cancel(){
+                alert(`${this.name} Cancelled His Train Reservation Form with Train Number ${this.traino}`)
+            }
+            //fill(name,traino){
+               // this.name = name
+               // this.traino = traino
+           // }
+        }
+        let rohan =  new Railwayform("Rohan",243536)
+        let rahul = new Railwayform("Rahul",9439287)
+       // rohan.fill("Rohan",456574)
+       // rahul.fill("Rahul",123446)
+        rohan.submit()
+        rahul.submit()
+        rohan.cancel()
+        
+   </script> 
+</body>
+</html>

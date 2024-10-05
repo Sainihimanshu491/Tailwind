@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class employee{
+            constructor(name,leaves){
+                this.name = name
+                this.leaves = leaves
+            }
+            loggin(){
+                console.log(this.name + "Employee is Logged In Server")
+            }
+            loggout(){
+                console.log(this.name + "Employee is Logg Out Server")
+            }
+            requestleaves(){
+                console.log(`Employee Has Been Requested ${this.leaves} leaves`)
+            }
+        }
+        class programmer extends employee{
+            constructor(name,leaves){
+                super()
+                this.name = name
+                this.leaves = leaves
+            }
+            loggout(){
+                console.log(this.name + "Employee is Logg Out Server")
+            }
+            requestleaves(){
+                console.log(`Employee Has Been Requested ${this.leaves + 1} leaves`)
+            }  
+        }
+        //let em = new employee("Himanshu ")
+        let em = new programmer("Himanshu",3)
+        em.loggout()
+        em.requestleaves()
+    </script>
+</body>
+</html>
